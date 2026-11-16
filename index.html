@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="pt-BR"><head><link rel="icon" href="IMG-20261116-WA0053.jpg">
+<html lang="pt-BR"><head><link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#080d14"><link rel="icon" href="IMG-20261116-WA0053.jpg">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Five Nights at Freezy’s</title>
@@ -629,4 +630,9 @@ const cgIO=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?CGV.add(e
 function cgInit(){CGV.forEach(c=>cgIO.unobserve(c));CGV.clear();document.querySelectorAll("#xg2 canvas.cgc").forEach(cv=>{cgSprite(cv.dataset.cg).then(sp=>{if(!sp||!cv.isConnected)return;cv._sp=sp;cgDraw(cv,sp);cgIO.observe(cv)})})}
 function cgLoop(t){requestAnimationFrame(cgLoop);if(t-CGT<110)return;CGT=t;if(document.hidden||$("EX").style.display!="flex"||$("xg2").style.display=="none")return;CGV.forEach(cv=>{if(!cv.isConnected){CGV.delete(cv);return}if(cv._sp)cgDraw(cv,cv._sp)})}
 requestAnimationFrame(cgLoop);
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
+}
 </script></body></html>
