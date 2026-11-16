@@ -1,11 +1,10 @@
-
 {
   "name": "Five Nights at Freezy's",
   "short_name": "Freezy's",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "orientation": "landscape",
+  "orientation": "portrait",
   "background_color": "#080d14",
   "theme_color": "#080d14"
 }
