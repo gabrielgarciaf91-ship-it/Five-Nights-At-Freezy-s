@@ -1,10 +1,14 @@
 {
   "name": "Five Nights at Freezy's",
   "short_name": "Freezy's",
+  "id": "./",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#080d14",
-  "theme_color": "#080d14"
+  "theme_color": "#080d14",
+  "icons": [
+    { "src": "IMG-20261116-WA0053.jpg", "sizes": "1024x1024", "type": "image/jpeg", "purpose": "any" }
+  ]
 }
